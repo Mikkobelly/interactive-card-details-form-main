@@ -1,0 +1,15 @@
+.row-3 {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr;
+
+    @include respond(tab-port) {
+        display: block;
+    }
+}
+
+.row-2 {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}

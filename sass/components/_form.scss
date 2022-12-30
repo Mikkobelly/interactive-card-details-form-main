@@ -1,0 +1,78 @@
+.form {
+    &-container {
+        width: 40%;
+        height: 44%;
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+
+        @include respond(tab-port) {
+            width: 75%;
+            left: 50%;
+        }
+
+        @include respond(phone) {
+            width: 85%;
+        }
+    }
+
+    &-group {
+        width: 100%;
+    }
+
+    &__label {
+        text-transform: uppercase;
+        display: inline-block;
+    }
+
+    &__label-full {
+        display: inline-block;
+        width: 100%;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 1rem 2rem;
+        margin-bottom: 2rem;
+        border: 1px solid rgba($color-violet, .5);
+        border-radius: 5px;
+        transition: all .2s;
+
+
+        &-small {
+            width: 90%;
+        }
+
+        &::placeholder {
+            color: rgba($color-violet, .5);
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid rgba($color-violet-dark, .8);
+            color: $color-violet-dark;
+        }
+
+        &:focus:invalid {
+            border: 2px solid rgba($color-red, .8);
+        }
+    }
+}
+
+// .form:focus:invalid+.invalid-feedback {
+//     visibility: visible !important;
+// }
+
+.main__button {
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: $color-violet-dark;
+    color: $color-white;
+    border: none;
+    border-radius: .5rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

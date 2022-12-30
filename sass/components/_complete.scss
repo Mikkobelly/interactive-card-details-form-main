@@ -1,0 +1,39 @@
+.complete {
+    &-container {
+        width: 40%;
+        height: 44%;
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        @include respond(tab-port) {
+            width: 75%;
+            left: 50%;
+        }
+
+        @include respond(phone) {
+            width: 85%;
+        }
+
+        .complete {
+            &__icon {
+                width: 8rem;
+            }
+
+            &__title {
+                font-size: 4rem;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+
+            &__text {
+                color: $color-violet;
+            }
+        }
+    }
+}

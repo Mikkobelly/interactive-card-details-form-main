@@ -1,0 +1,140 @@
+.card__front,
+.card__back {
+    position: absolute;
+    width: 48rem;
+    height: 25rem;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $color-white;
+
+    @include respond(tab-port) {
+        width: 46rem;
+        height: 24rem;
+    }
+
+    @include respond(small-phone) {
+        width: 40rem;
+        height: 21rem;
+    }
+}
+
+.card__front {
+    background-image: url(../images/bg-card-front.png);
+    padding: 3rem;
+    text-transform: uppercase;
+    top: 20%;
+    left: 20%;
+    z-index: 10;
+
+    @include respond(tab-port) {
+        top: 55%;
+        left: 15%;
+    }
+
+    @include respond(phone) {
+        left: 5%;
+    }
+}
+
+.card__back {
+    background-image: url(../images/bg-card-back.png);
+    top: 51%;
+    left: 30%;
+    z-index: 8;
+
+    @include respond(tab-port) {
+        top: 10%;
+        left: 35%;
+    }
+
+    @include respond(phone) {
+        left: 20%;
+    }
+}
+
+.card__details {
+    display: block;
+
+    &-number {
+        font-size: 3rem;
+        letter-spacing: 3px;
+        text-align: center;
+
+        @include respond(tab-port) {
+            font-size: 2.2rem;
+        }
+    }
+
+    &-cvc {
+        position: absolute;
+        top: 46%;
+        right: 12%;
+
+        @include respond(tab-port) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &-info {
+
+        @include respond(tab-port) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &-info::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    &-name {
+        float: left;
+    }
+
+    &-date {
+        float: right;
+    }
+}
+
+// .circle-container {
+//     width: 100%;
+// }
+
+.circle-big,
+.circle-small {
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.circle-big {
+    width: 4rem;
+    height: 4rem;
+    background-color: $color-white;
+
+    @include respond(tab-port) {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+}
+
+.circle-small {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: solid 1px $color-white;
+    background-color: transparent;
+    transform: translateY(1rem);
+
+    @include respond(tab-port) {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}

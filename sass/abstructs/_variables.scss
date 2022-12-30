@@ -1,0 +1,26 @@
+/*
+## Colors
+
+### Primary
+
+- Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
+- Red (input errors): hsl(0, 100%, 66%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Light grayish violet: hsl(270, 3%, 87%)
+- Dark grayish violet: hsl(279, 6%, 55%)
+- Very dark violet: hsl(278, 68%, 11%)
+*/
+
+$color-violet: hsl(279, 6%, 55%);
+$color-violet-dark: hsl(278, 68%, 11%);
+$color-violet-light: hsl(270, 3%, 87%);
+
+$color-white: hsl(0, 0%, 100%);
+
+$color-red-gradient-light: hsl(249, 99%, 64%);
+$color-red-gradient-dark: hsl(278, 94%, 30%);
+
+$color-red: hsl(0, 100%, 66%);

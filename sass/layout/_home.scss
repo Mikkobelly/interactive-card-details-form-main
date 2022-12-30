@@ -1,0 +1,25 @@
+.card-section {
+    height: 100vh;
+    background-image: url(../images/bg-main-desktop.png);
+    background-size: cover;
+    position: relative;
+
+    @include respond(tab-port) {
+        height: 30vh
+    }
+}
+
+.main-section {
+    height: 100vh;
+    background-color: $color-white;
+    // display: block;
+    position: relative;
+
+    @include respond(tab-port) {
+        height: 70vh;
+    }
+}
+
+.attribution {
+    text-align: center;
+}
